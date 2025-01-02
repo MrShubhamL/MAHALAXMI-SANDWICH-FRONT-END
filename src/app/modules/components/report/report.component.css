@@ -1,0 +1,148 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #f8f9fa; /* Matches `bg-light` */
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for distinction */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%; 
+    padding: 1rem 0;
+    background: linear-gradient(180deg, #2c3e50, #34495e);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px; /* Slightly reduced width for better fit on smaller screens */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #1c1e22;
+    overflow: hidden;
+}
+
+.sidebar .nav-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar .nav-link {
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem; /* Adjusted padding for better spacing */
+    transition: background 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(236, 240, 241, 0.2);
+    color: #fff;
+}
+
+/* Content Area */
+.container {
+    padding: 1.5rem; /* Slightly reduced padding for better fit */
+    margin-left: 220px; /* Align with the new sidebar width */
+    margin-top: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Custom Box Styles */
+.custom-box {
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.1rem; /* Slightly reduced font size for better fit */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1), -4px -4px 20px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #2c3e50;
+}
+
+.custom-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+    .sidebar {
+        width: 200px; /* Reduce sidebar width further for medium screens */
+    }
+
+    .container {
+        margin-left: 0px; /* Align with reduced sidebar width */
+        padding: 1rem; /* Further reduce padding */
+    }
+
+    .custom-box {
+        font-size: 1rem; /* Further reduce font size */
+        padding: 1rem; /* Further reduce padding */
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 180px; /* Further reduce sidebar width for smaller screens */
+    }
+
+    .container {
+        margin-left: 180px; /* Align with reduced sidebar width */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small devices */
+    }
+
+    .container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .custom-box {
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-box {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+
+.flex {
+    height: 100vh;
+}

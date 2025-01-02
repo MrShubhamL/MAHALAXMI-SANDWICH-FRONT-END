@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: scroll; /* Ensure scrolling works */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+
+
+
+/* Print-specific styles */
+@media print {
+    .no-print {
+        display: none;
+        /* Hide this element when printing */
+    }
+}
+
+@media print {
+    body {
+        font-size: 12px;
+        /* Adjust font size for better readability */
+        line-height: 1.5;
+        /* Ensure text spacing is appropriate */
+        width: 100%;
+    }
+}
+

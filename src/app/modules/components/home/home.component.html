@@ -1,0 +1,6 @@
+<app-navbar *ngIf="!isLoading" class="no-print"></app-navbar>
+<router-outlet *ngIf="!isLoading" class="no-print"></router-outlet>
+
+<div *ngIf="isLoading" class="spinner-overlay">
+    <img src="assets/img/1000110861-removebg.png" alt="Loading..." class="loading-image" />
+</div>

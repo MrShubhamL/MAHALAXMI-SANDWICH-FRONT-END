@@ -1,0 +1,203 @@
+
+body {
+    background-color: #f7f5f5;
+    overflow: hidden;
+}
+
+
+
+.navbar, .btn-primary, .btn-danger {
+    transition: all 0.3s ease;
+}
+
+.navbar:hover, .btn-primary:hover, .btn-danger:hover {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav-pills .nav-link {
+    background-color: #6c757d; /* Bootstrap secondary color (grey) */
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #545b62; /* Slightly darker grey for active state */
+    color: white;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+.font-size {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.margin {
+    margin-top: -20px;
+}
+
+
+.card-size{
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    object-fit: cover; 
+}
+
+.card img{
+    min-height: 100px;
+    max-height: 100px;
+}
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." for truncated text */
+    white-space: nowrap; /* Prevents text from wrapping */
+    max-width: fit-content; /* Set your desired width */
+}
+
+.heading{
+    padding: 6px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: white;
+}
+
+.menu-items-section {
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.menu-items-section::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+
+
+.sticky-section {
+    position: sticky;
+    top: 20px; 
+    z-index: 1000;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Scrollable table container */
+.table {
+    max-height: fit-content; /* Adjust the max-height as needed */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.table::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Edge */
+}
+
+
+@media (max-width: 399px) {
+    .single-line-input {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .single-line-input input {
+      max-width: 20px; /* Adjust width for smaller screens */
+    }
+  }
+
+  .single-line-input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .single-line-input button {
+    flex: 1;
+  }
+
+  .single-line-input input {
+    text-align: center;
+  }
+
+
+
+
+
+  .bottom-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 50%; /* Adjust height as needed */
+    background: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: scroll;
+    z-index: 1050; /* Above other elements */
+  }
+  
+  .bottom-dialog.show {
+    transform: translateY(0);
+  }
+  
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dialog-body {
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .bottom-dialog {
+      display: none;
+    }
+    
+  }
+  
